@@ -1,21 +1,5 @@
 
 @-moz-document url-prefix("chrome:") {
-	:root {
-		--rs-findbar-open-pos: 15px;
-		--rs-findbar-closed-pos: -85px;
-		--rs-findbar-transition-duration: 0.35s;
-	}
-
-	@keyframes rs-findbar-open {
-		from {
-			top: var(--rs-findbar-closed-pos);
-		}
-
-		to {
-			top: var(--rs-findbar-open-pos);
-		}
-	}
-
 	findbar {
 		display: flex;
 
@@ -25,11 +9,10 @@
 		width: 90% !important;
 		max-width: 800px;
 
-		/* height: 50px !important; */
 		height: auto !important;
 
 		position: absolute !important;
-		top: var(--rs-findbar-open-pos);
+		top: 15px;
 		left: 50%;
 		transform: translateX(-50%);
 
@@ -39,11 +22,10 @@
 		background: var(--zen-colors-tertiary) !important;
 		border: 1px solid var(--zen-colors-border) !important;
 
-		animation-name: rs-findbar-open !important;
-		animation-duration: var(--rs-findbar-transition-duration) !important;
-		animation-timing-function: ease !important;
+		transition: top 0.35s ease !important;
 
-		transition: all var(--rs-findbar-transition-duration) ease !important;
+		visibility: visible !important;
+		opacity: 1 !important;
 
 
 		& .findbar-container {
@@ -63,7 +45,11 @@
 		}
 
 		&[hidden="true"] {
-			top: var(--rs-findbar-closed-pos);
+			top: -85px;
+		}
+
+		@starting-style {
+			top: -85px;
 		}
 	}
 }
