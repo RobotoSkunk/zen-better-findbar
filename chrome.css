@@ -45,11 +45,11 @@
 		}
 
 		&[hidden="true"] {
-			top: -85px;
+			top: -150px;
 		}
 
 		@starting-style {
-			top: -85px;
+			top: -150px;
 		}
 	}
 }
