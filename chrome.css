@@ -1,4 +1,13 @@
 
+:root {
+	--better-findbar-transform-translateY: -150px;
+	--better-findbar-transform-translateX: -50%;
+	--better-findbar-position-top: 15px;
+	--better-findbar-position-bottom: auto;
+	--better-findbar-position-left: 50%;
+	--better-findbar-position-right: auto;
+}
+
 @-moz-document url-prefix("chrome:") {
 	findbar {
 		display: flex !important;
@@ -12,9 +21,11 @@
 		height: auto !important;
 
 		position: absolute !important;
-		top: 15px;
-		left: 50%;
-		transform: translateX(-50%);
+		top: var(--better-findbar-position-top);
+		bottom: var(--better-findbar-position-bottom);
+		left: var(--better-findbar-position-left);
+		right: var(--better-findbar-position-right);
+		transform: translateX(var(--better-findbar-transform-translateX)) translateY(0);
 
 		overflow: unset !important;
 		box-shadow: var(--box-shadow-10);
@@ -26,7 +37,6 @@
 
 		visibility: visible !important;
 		opacity: 1 !important;
-
 
 		& .findbar-container {
 			flex-wrap: wrap;
@@ -44,31 +54,38 @@
 			}
 		}
 
-
 		&[hidden="true"] {
-			top: -150px;
+			transform: translateX(var(--better-findbar-transform-translateX)) translateY(var(--better-findbar-transform-translateY));
 		}
 
 		@starting-style {
-			top: -150px;
+			transform: translateX(var(--better-findbar-transform-translateX)) translateY(var(--better-findbar-transform-translateY));
 		}
 	}
-	
 	
 	/* Horizontal Position */
-	body:has(#theme-Better-Find-Bar[theme-better_find_bar-horizontal_position="left"]) {
-		findbar {
-			left: 15px;
-			transform: translateX(0%);
-		}
+	body:has(
+			#theme-Better-Find-Bar[theme-better_find_bar-horizontal_position="left"]
+		) {
+		--better-findbar-transform-translateX: 0%;
+		--better-findbar-position-left: 15px;
+		--better-findbar-position-right: auto;
 	}
 
-	body:has(#theme-Better-Find-Bar[theme-better_find_bar-horizontal_position="right"]) {
-		findbar {
-			left: unset !important;
-			right: 15px;
-			transform: translateX(0%);
-		}
+	body:has(
+			#theme-Better-Find-Bar[theme-better_find_bar-horizontal_position="right"]
+		) {
+		--better-findbar-transform-translateX: 0%;
+		--better-findbar-position-left: auto;
+		--better-findbar-position-right: 15px;
+	}
+
+	body:has(
+			#theme-Better-Find-Bar[theme-better_find_bar-vertical_position="bottom"]
+		) {
+		--better-findbar-transform-translateY: 150px;
+		--better-findbar-position-bottom: 15px;
+		--better-findbar-position-top: auto;
 	}
 
 
