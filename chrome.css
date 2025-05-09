@@ -1,14 +1,18 @@
 
 :root {
-	--better-findbar-transform-translateY: -150px;
+	--better-findbar-transform-translateY: 150px;
 	--better-findbar-transform-translateX: -50%;
-	--better-findbar-position-top: 15px;
-	--better-findbar-position-bottom: auto;
+	--better-findbar-position-top: auto;
+	--better-findbar-position-bottom: 15px;
 	--better-findbar-position-left: 50%;
 	--better-findbar-position-right: auto;
 }
 
 @-moz-document url-prefix("chrome:") {
+	.browserContainer {
+		overflow: clip
+	}
+
 	findbar {
 		display: flex !important;
 
@@ -33,7 +37,7 @@
 		background: var(--zen-colors-tertiary) !important;
 		border: 1px solid var(--zen-colors-border) !important;
 
-		transition: top 0.35s ease, bottom 0.35s ease !important;
+		transition: transform 0.35s ease !important;
 
 		visibility: visible !important;
 		opacity: 1 !important;
@@ -62,7 +66,7 @@
 			transform: translateX(var(--better-findbar-transform-translateX)) translateY(var(--better-findbar-transform-translateY));
 		}
 	}
-	
+
 	/* Horizontal Position */
 	body:has(
 			#theme-Better-Find-Bar[theme-better_find_bar-horizontal_position="left"]
@@ -81,11 +85,11 @@
 	}
 
 	body:has(
-			#theme-Better-Find-Bar[theme-better_find_bar-vertical_position="bottom"]
+			#theme-Better-Find-Bar[theme-better_find_bar-vertical_position="top"]
 		) {
-		--better-findbar-transform-translateY: 150px;
-		--better-findbar-position-bottom: 15px;
-		--better-findbar-position-top: auto;
+		--better-findbar-transform-translateY: -150px;
+		--better-findbar-position-bottom: auto;
+		--better-findbar-position-top: 15px;
 	}
 
 
