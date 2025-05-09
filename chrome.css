@@ -9,6 +9,10 @@
 }
 
 @-moz-document url-prefix("chrome:") {
+	.browserContainer {
+		overflow: clip
+	}
+
 	findbar {
 		display: flex !important;
 
@@ -33,7 +37,7 @@
 		background: var(--zen-colors-tertiary) !important;
 		border: 1px solid var(--zen-colors-border) !important;
 
-		transition: top 0.35s ease, bottom 0.35s ease !important;
+		transition: transform 0.35s ease !important;
 
 		visibility: visible !important;
 		opacity: 1 !important;
