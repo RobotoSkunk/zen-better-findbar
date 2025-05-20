@@ -43,5 +43,41 @@
 				"value": "default"
 			}
 		]
+	},
+	{
+		"property": "theme.better_find_bar.textbox_width",
+		"label": "Textbox width",
+		"type": "string",
+		"defaultValue": "800"
+	},
+	{
+		"property": "theme.better_find_bar.hide_buttons",
+		"label": "Hide all buttons",
+		"type": "checkbox",
+		"defaultValue": true
+	},
+	{
+		"property": "theme.better_find_bar.hide_highlight",
+		"label": "Hide highlight",
+		"type": "checkbox",
+		"defaultValue": false
+	},
+	{
+		"property": "theme.better_find_bar.hide_match_case",
+		"label": "Hide match case",
+		"type": "checkbox",
+		"defaultValue": false
+	},
+	{
+		"property": "theme.better_find_bar.hide_match_diacritics",
+		"label": "Hide match diacritics",
+		"type": "checkbox",
+		"defaultValue": false
+	},
+	{
+		"property": "theme.better_find_bar.hide_whole_words",
+		"label": "Hide whole words",
+		"type": "checkbox",
+		"defaultValue": false
 	}
 ]

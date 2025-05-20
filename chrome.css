@@ -20,7 +20,7 @@
 		margin: 0px !important;
 
 		width: 90% !important;
-		max-width: 800px;
+		max-width: calc(var(--theme-better_find_bar-textbox_width) * 1px); 
 
 		height: auto !important;
 
@@ -103,6 +103,40 @@
 
 		findbar .findbar-textbox:not([status="notfound"]) {
 			background: color-mix(in hsl, var(--zen-colors-tertiary), transparent 10%) !important;
+		}
+	}
+
+	/* Hide buttons */
+	@media (-moz-bool-pref: "theme.better_find_bar.hide_buttons") {
+		findbar checkbox.findbar-highlight:not([checked]),
+		findbar checkbox.findbar-case-sensitive:not([checked]),
+		findbar checkbox.findbar-match-diacritics:not([checked]),
+		findbar checkbox.findbar-entire-word:not([checked]){
+			display: none !important;
+		}
+	}
+
+	@media (-moz-bool-pref: "theme.better_find_bar.hide_highlight") {
+		findbar checkbox.findbar-highlight:not([checked]) {
+			display: none !important;
+		}
+	}
+
+	@media (-moz-bool-pref: "theme.better_find_bar.hide_match_case") {
+		findbar checkbox.findbar-case-sensitive:not([checked]) {
+			display: none !important;
+		}
+	}
+
+	@media (-moz-bool-pref: "theme.better_find_bar.hide_match_diacritics") {
+		findbar checkbox.findbar-match-diacritics:not([checked]) {
+			display: none !important;
+		}
+	}
+
+	@media (-moz-bool-pref: "theme.better_find_bar.hide_whole_words") {
+		findbar checkbox.findbar-entire-word:not([checked]) {
+			display: none !important;
 		}
 	}
 }
