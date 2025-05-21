@@ -53,31 +53,91 @@
 	{
 		"property": "theme.better_find_bar.hide_buttons",
 		"label": "Hide all buttons",
-		"type": "checkbox",
-		"defaultValue": true
+		"type": "dropdown",
+		"disabledOn": [],
+		"placeholder": "Not hide",
+		"defaultValue": "not_hide",
+		"options": [
+			{
+				"label": "Hide immediately (functions stays active)",
+				"value": "hide_immediately"
+			},
+			{
+				"label": "Hide after disabling (functions deactivates)",
+				"value": "hide_on_disable"
+			}
+		]
 	},
 	{
 		"property": "theme.better_find_bar.hide_highlight",
 		"label": "Hide highlight",
-		"type": "checkbox",
-		"defaultValue": false
+		"type": "dropdown",
+		"disabledOn": [],
+		"placeholder": "Not hide",
+		"defaultValue": "not_hide",
+		"options": [
+			{
+				"label": "Hide immediately (function stays active)",
+				"value": "hide_immediately"
+			},
+			{
+				"label": "Hide after disabling (function deactivates)",
+				"value": "hide_on_disable"
+			}
+		]
 	},
 	{
 		"property": "theme.better_find_bar.hide_match_case",
 		"label": "Hide match case",
-		"type": "checkbox",
-		"defaultValue": false
+		"type": "dropdown",
+		"disabledOn": [],
+		"placeholder": "Not hide",
+		"defaultValue": "not_hide",
+		"options": [
+			{
+				"label": "Hide immediately (function stays active)",
+				"value": "hide_immediately"
+			},
+			{
+				"label": "Hide after disabling (function deactivates)",
+				"value": "hide_on_disable"
+			}
+		]
 	},
 	{
 		"property": "theme.better_find_bar.hide_match_diacritics",
 		"label": "Hide match diacritics",
-		"type": "checkbox",
-		"defaultValue": false
+		"type": "dropdown",
+		"disabledOn": [],
+		"placeholder": "Not hide",
+		"defaultValue": "not_hide",
+		"options": [
+			{
+				"label": "Hide immediately (function stays active)",
+				"value": "hide_immediately"
+			},
+			{
+				"label": "Hide after disabling (function deactivates)",
+				"value": "hide_on_disable"
+			}
+		]
 	},
 	{
 		"property": "theme.better_find_bar.hide_whole_words",
 		"label": "Hide whole words",
-		"type": "checkbox",
-		"defaultValue": false
+		"type": "dropdown",
+		"disabledOn": [],
+		"placeholder": "Not hide",
+		"defaultValue": "not_hide",
+		"options": [
+			{
+				"label": "Hide immediately (function stays active)",
+				"value": "hide_immediately"
+			},
+			{
+				"label": "Hide after disabling (function deactivates)",
+				"value": "hide_on_disable"
+			}
+		]
 	}
 ]

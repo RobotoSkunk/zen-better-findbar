@@ -107,7 +107,20 @@
 	}
 
 	/* Hide buttons */
-	@media (-moz-bool-pref: "theme.better_find_bar.hide_buttons") {
+	body:has(
+			#theme-Better-Find-Bar[theme-better_find_bar-hide_buttons="hide_immediately"]
+		) {
+		findbar .findbar-highlight,
+		findbar .findbar-case-sensitive,
+		findbar .findbar-match-diacritics,
+		findbar .findbar-entire-word {
+			display: none !important;
+		}
+	}
+
+	body:has(
+			#theme-Better-Find-Bar[theme-better_find_bar-hide_buttons="hide_on_disable"]
+		) {
 		findbar checkbox.findbar-highlight:not([checked]),
 		findbar checkbox.findbar-case-sensitive:not([checked]),
 		findbar checkbox.findbar-match-diacritics:not([checked]),
@@ -116,26 +129,70 @@
 		}
 	}
 
-	@media (-moz-bool-pref: "theme.better_find_bar.hide_highlight") {
-		findbar checkbox.findbar-highlight:not([checked]) {
+	/* Hide highlight */
+	body:has(
+			#theme-Better-Find-Bar[theme-better_find_bar-hide_highlight="hide_immediately"]
+		) {
+			findbar .findbar-highlight {
 			display: none !important;
 		}
 	}
 
-	@media (-moz-bool-pref: "theme.better_find_bar.hide_match_case") {
-		findbar checkbox.findbar-case-sensitive:not([checked]) {
+	body:has(
+			#theme-Better-Find-Bar[theme-better_find_bar-hide_highlight="hide_on_disable"]
+		) {
+			findbar checkbox.findbar-highlight:not([checked]) {
 			display: none !important;
 		}
 	}
 
-	@media (-moz-bool-pref: "theme.better_find_bar.hide_match_diacritics") {
-		findbar checkbox.findbar-match-diacritics:not([checked]) {
+	/* Hide match case */
+	body:has(
+			#theme-Better-Find-Bar[theme-better_find_bar-hide_match_case="hide_immediately"]
+		) {
+			findbar .findbar-case-sensitive {
 			display: none !important;
 		}
 	}
 
-	@media (-moz-bool-pref: "theme.better_find_bar.hide_whole_words") {
-		findbar checkbox.findbar-entire-word:not([checked]) {
+	body:has(
+			#theme-Better-Find-Bar[theme-better_find_bar-hide_match_case="hide_on_disable"]
+		) {
+			findbar checkbox.findbar-case-sensitive:not([checked]) {
+			display: none !important;
+		}
+	}
+
+	/* Hide match diacritics */
+	body:has(
+			#theme-Better-Find-Bar[theme-better_find_bar-hide_match_diacritics="hide_immediately"]
+		) {
+			findbar .findbar-match-diacritics {
+			display: none !important;
+		}
+	}
+
+	body:has(
+			#theme-Better-Find-Bar[theme-better_find_bar-hide_match_diacritics="hide_on_disable"]
+		) {
+			findbar checkbox.findbar-match-diacritics:not([checked]) {
+			display: none !important;
+		}
+	}
+
+	/* Hide whole words */
+	body:has(
+			#theme-Better-Find-Bar[theme-better_find_bar-hide_whole_words="hide_immediately"]
+		) {
+			findbar .findbar-entire-word {
+			display: none !important;
+		}
+	}
+
+	body:has(
+			#theme-Better-Find-Bar[theme-better_find_bar-hide_whole_words="hide_on_disable"]
+		) {
+			findbar checkbox.findbar-entire-word:not([checked]) {
 			display: none !important;
 		}
 	}
