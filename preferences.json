@@ -2,7 +2,8 @@
 	{
 		"property": "theme.better_find_bar.transparent_background",
 		"label": "Transparent background",
-		"type": "checkbox"
+		"type": "checkbox",
+		"defaultValue": false
 	},
 	{
 		"property": "theme.better_find_bar.horizontal_position",
