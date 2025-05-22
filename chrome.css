@@ -167,6 +167,14 @@
 		}
 	}
 
+	body:has(
+			#theme-Better-Find-Bar[theme-better_find_bar-hide_whole_words="hide_on_disable"]
+		) {
+		findbar .findbar-entire-word:not([checked]) {
+			display: none !important;
+		}
+	}
+
 	/* Hide find status label */
 	@media (-moz-bool-pref: "theme.better_find_bar.hide_find_status") {
 		findbar .findbar-find-status {
