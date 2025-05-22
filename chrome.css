@@ -167,10 +167,16 @@
 		}
 	}
 
-	body:has(
-			#theme-Better-Find-Bar[theme-better_find_bar-hide_whole_words="hide_on_disable"]
-		) {
-		findbar checkbox.findbar-entire-word:not([checked]) {
+	/* Hide find status label */
+	@media (-moz-bool-pref: "theme.better_find_bar.hide_find_status") {
+		findbar .findbar-find-status {
+			display: none !important;
+		}
+	}
+
+	/* Hide found matches label */
+	@media (-moz-bool-pref: "theme.better_find_bar.hide_found_matches") {
+		findbar .findbar-label.found-matches {
 			display: none !important;
 		}
 	}

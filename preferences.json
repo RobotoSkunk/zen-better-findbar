@@ -121,5 +121,17 @@
 				"value": "hide_on_disable"
 			}
 		]
+	},
+	{
+		"property": "theme.better_find_bar.hide_find_status",
+		"label": "Hide find status label",
+		"type": "checkbox",
+		"defaultValue": false
+	},
+	{
+		"property": "theme.better_find_bar.hide_found_matches",
+		"label": "Hide found matches label",
+		"type": "checkbox",
+		"defaultValue": false
 	}
 ]
