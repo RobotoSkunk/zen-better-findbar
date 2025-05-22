@@ -106,34 +106,11 @@
 		}
 	}
 
-	/* Hide buttons */
-	body:has(
-			#theme-Better-Find-Bar[theme-better_find_bar-hide_buttons="hide_immediately"]
-		) {
-		findbar .findbar-highlight,
-		findbar .findbar-case-sensitive,
-		findbar .findbar-match-diacritics,
-		findbar .findbar-entire-word {
-			display: none !important;
-		}
-	}
-
-	body:has(
-			#theme-Better-Find-Bar[theme-better_find_bar-hide_buttons="hide_on_disable"]
-		) {
-		findbar checkbox.findbar-highlight:not([checked]),
-		findbar checkbox.findbar-case-sensitive:not([checked]),
-		findbar checkbox.findbar-match-diacritics:not([checked]),
-		findbar checkbox.findbar-entire-word:not([checked]){
-			display: none !important;
-		}
-	}
-
-	/* Hide highlight */
+	/* Hide highlight checkbox */
 	body:has(
 			#theme-Better-Find-Bar[theme-better_find_bar-hide_highlight="hide_immediately"]
 		) {
-			findbar .findbar-highlight {
+		findbar .findbar-highlight {
 			display: none !important;
 		}
 	}
@@ -141,16 +118,16 @@
 	body:has(
 			#theme-Better-Find-Bar[theme-better_find_bar-hide_highlight="hide_on_disable"]
 		) {
-			findbar checkbox.findbar-highlight:not([checked]) {
+		findbar checkbox.findbar-highlight:not([checked]) {
 			display: none !important;
 		}
 	}
 
-	/* Hide match case */
+	/* Hide match case checkbox */
 	body:has(
 			#theme-Better-Find-Bar[theme-better_find_bar-hide_match_case="hide_immediately"]
 		) {
-			findbar .findbar-case-sensitive {
+		findbar .findbar-case-sensitive {
 			display: none !important;
 		}
 	}
@@ -158,16 +135,16 @@
 	body:has(
 			#theme-Better-Find-Bar[theme-better_find_bar-hide_match_case="hide_on_disable"]
 		) {
-			findbar checkbox.findbar-case-sensitive:not([checked]) {
+		findbar checkbox.findbar-case-sensitive:not([checked]) {
 			display: none !important;
 		}
 	}
 
-	/* Hide match diacritics */
+	/* Hide match diacritics checkbox */
 	body:has(
 			#theme-Better-Find-Bar[theme-better_find_bar-hide_match_diacritics="hide_immediately"]
 		) {
-			findbar .findbar-match-diacritics {
+		findbar .findbar-match-diacritics {
 			display: none !important;
 		}
 	}
@@ -175,16 +152,16 @@
 	body:has(
 			#theme-Better-Find-Bar[theme-better_find_bar-hide_match_diacritics="hide_on_disable"]
 		) {
-			findbar checkbox.findbar-match-diacritics:not([checked]) {
+		findbar checkbox.findbar-match-diacritics:not([checked]) {
 			display: none !important;
 		}
 	}
 
-	/* Hide whole words */
+	/* Hide whole words checkbox */
 	body:has(
 			#theme-Better-Find-Bar[theme-better_find_bar-hide_whole_words="hide_immediately"]
 		) {
-			findbar .findbar-entire-word {
+		findbar .findbar-entire-word {
 			display: none !important;
 		}
 	}
@@ -192,7 +169,7 @@
 	body:has(
 			#theme-Better-Find-Bar[theme-better_find_bar-hide_whole_words="hide_on_disable"]
 		) {
-			findbar checkbox.findbar-entire-word:not([checked]) {
+		findbar checkbox.findbar-entire-word:not([checked]) {
 			display: none !important;
 		}
 	}
