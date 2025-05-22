@@ -9,7 +9,7 @@
 		"label": "Horizontal position",
 		"type": "dropdown",
 		"disabledOn": [],
-		"placeholder": "Select horizontal position",
+		"placeholder": "Use default",
 		"defaultValue": "default",
 		"options": [
 			{
@@ -31,7 +31,7 @@
 		"label": "Vertical position",
 		"type": "dropdown",
 		"disabledOn": [],
-		"placeholder": "Select vertical position",
+		"placeholder": "Use default",
 		"defaultValue": "default",
 		"options": [
 			{
@@ -41,6 +41,84 @@
 			{
 				"label": "Bottom",
 				"value": "default"
+			}
+		]
+	},
+	{
+		"property": "theme.better_find_bar.textbox_width",
+		"label": "Textbox width (px)",
+		"type": "string",
+		"defaultValue": "800"
+	},
+	{
+		"property": "theme.better_find_bar.hide_highlight",
+		"label": "Hide \"highlight\" checkbox",
+		"type": "dropdown",
+		"disabledOn": [],
+		"placeholder": "Show",
+		"defaultValue": "not_hide",
+		"options": [
+			{
+				"label": "Hide",
+				"value": "hide_immediately"
+			},
+			{
+				"label": "Show only when checked",
+				"value": "hide_on_disable"
+			}
+		]
+	},
+	{
+		"property": "theme.better_find_bar.hide_match_case",
+		"label": "Hide \"match case\" checkbox",
+		"type": "dropdown",
+		"disabledOn": [],
+		"placeholder": "Show",
+		"defaultValue": "not_hide",
+		"options": [
+			{
+				"label": "Hide",
+				"value": "hide_immediately"
+			},
+			{
+				"label": "Show only when checked",
+				"value": "hide_on_disable"
+			}
+		]
+	},
+	{
+		"property": "theme.better_find_bar.hide_match_diacritics",
+		"label": "Hide \"match diacritics\" checkbox",
+		"type": "dropdown",
+		"disabledOn": [],
+		"placeholder": "Show",
+		"defaultValue": "not_hide",
+		"options": [
+			{
+				"label": "Hide",
+				"value": "hide_immediately"
+			},
+			{
+				"label": "Show only when checked",
+				"value": "hide_on_disable"
+			}
+		]
+	},
+	{
+		"property": "theme.better_find_bar.hide_whole_words",
+		"label": "Hide \"whole words\" checkbox",
+		"type": "dropdown",
+		"disabledOn": [],
+		"placeholder": "Show",
+		"defaultValue": "not_hide",
+		"options": [
+			{
+				"label": "Hide",
+				"value": "hide_immediately"
+			},
+			{
+				"label": "Show only when checked",
+				"value": "hide_on_disable"
 			}
 		]
 	}
