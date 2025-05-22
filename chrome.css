@@ -84,6 +84,7 @@
 		--better-findbar-position-right: 15px;
 	}
 
+	/* Vertical Position */
 	body:has(
 			#theme-Better-Find-Bar[theme-better_find_bar-vertical_position="top"]
 		) {
