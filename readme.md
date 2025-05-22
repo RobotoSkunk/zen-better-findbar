@@ -1,4 +1,3 @@
 # Better Find Bar
 
-Improves the find bar by matching the browser theme, making it floating
-and adding more customization.
+Improves the find bar, making it floating with theme match and customization.
