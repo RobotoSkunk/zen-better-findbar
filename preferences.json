@@ -3,7 +3,7 @@
 		"property": "theme.better_find_bar.transparent_background",
 		"label": "Transparent background",
 		"type": "checkbox",
-		"defaultValue": false
+		"defaultValue": true
 	},
 	{
 		"property": "theme.better_find_bar.horizontal_position",
