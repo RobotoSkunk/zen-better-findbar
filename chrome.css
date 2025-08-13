@@ -96,10 +96,6 @@
 		findbar .findbar-textbox:not([status="notfound"]) {
 			backdrop-filter: blur(8px);
 
-			background: color-mix(in hsl, var(--zen-colors-primary), transparent 30%) !important;
-		}
-
-		findbar .findbar-textbox:not([status="notfound"]) {
 			background: color-mix(in hsl, var(--zen-colors-primary), transparent 10%) !important;
 		}
 	}
