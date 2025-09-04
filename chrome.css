@@ -31,7 +31,7 @@
 		box-shadow: var(--box-shadow-10);
 
 		background: var(--zen-primary-color) !important;
-		border: 1px solid var(--zen-colors-border) !important;
+		border: 1px solid var(--input-border-color) !important;
 
 		transition: transform 0.35s ease !important;
 
