@@ -8,177 +8,175 @@
 	--better-findbar-position-right: auto;
 }
 
-@-moz-document url-prefix("chrome:") {
-	findbar {
-		display: flex !important;
+findbar {
+	display: flex !important;
 
-		border-radius: var(--zen-border-radius) !important;
-		margin: 0px !important;
+	border-radius: var(--zen-border-radius) !important;
+	margin: 0px !important;
 
-		width: 90% !important;
-		max-width: calc(var(--theme-better_find_bar-textbox_width) * 1px); 
+	width: 90% !important;
+	max-width: calc(var(--theme-better_find_bar-textbox_width) * 1px); 
 
+	height: auto !important;
+
+	position: absolute !important;
+	top: var(--better-findbar-position-top);
+	bottom: var(--better-findbar-position-bottom);
+	left: var(--better-findbar-position-left);
+	right: var(--better-findbar-position-right);
+	transform: translateX(var(--better-findbar-transform-translateX)) translateY(0);
+
+	overflow: unset !important;
+	box-shadow: var(--box-shadow-10);
+
+	background: var(--zen-primary-color) !important;
+	border: 1px solid var(--input-border-color) !important;
+
+	transition: transform 0.35s ease !important;
+
+	visibility: visible !important;
+	opacity: 1 !important;
+
+	& .findbar-container {
+		flex-wrap: wrap;
+		overflow-x: auto !important;
 		height: auto !important;
 
-		position: absolute !important;
-		top: var(--better-findbar-position-top);
-		bottom: var(--better-findbar-position-bottom);
-		left: var(--better-findbar-position-left);
-		right: var(--better-findbar-position-right);
-		transform: translateX(var(--better-findbar-transform-translateX)) translateY(0);
+		row-gap: 10px;
 
-		overflow: unset !important;
-		box-shadow: var(--box-shadow-10);
-
-		background: var(--zen-primary-color) !important;
-		border: 1px solid var(--input-border-color) !important;
-
-		transition: transform 0.35s ease !important;
-
-		visibility: visible !important;
-		opacity: 1 !important;
-
-		& .findbar-container {
-			flex-wrap: wrap;
-			overflow-x: auto !important;
-			height: auto !important;
-
-			row-gap: 10px;
-
-			& > :first-child {
-				width: 100% !important;
-			}
-	
-			& .findbar-textbox {
-				flex-grow: 1;
-			}
+		& > :first-child {
+			width: 100% !important;
 		}
 
-		&[hidden] {
-			transform: translateX(var(--better-findbar-transform-translateX)) translateY(var(--better-findbar-transform-translateY));
-		}
-
-		@starting-style {
-			transform: translateX(var(--better-findbar-transform-translateX)) translateY(var(--better-findbar-transform-translateY));
+		& .findbar-textbox {
+			flex-grow: 1;
 		}
 	}
 
-	/* Horizontal Position */
-	body:has(
-			#theme-Better-Find-Bar[theme-better_find_bar-horizontal_position="left"]
-		) {
-		--better-findbar-transform-translateX: 0%;
-		--better-findbar-position-left: 15px;
-		--better-findbar-position-right: auto;
+	&[hidden] {
+		transform: translateX(var(--better-findbar-transform-translateX)) translateY(var(--better-findbar-transform-translateY));
 	}
 
-	body:has(
-			#theme-Better-Find-Bar[theme-better_find_bar-horizontal_position="right"]
-		) {
-		--better-findbar-transform-translateX: 0%;
-		--better-findbar-position-left: auto;
-		--better-findbar-position-right: 15px;
+	@starting-style {
+		transform: translateX(var(--better-findbar-transform-translateX)) translateY(var(--better-findbar-transform-translateY));
 	}
+}
 
-	/* Vertical Position */
-	body:has(
-			#theme-Better-Find-Bar[theme-better_find_bar-vertical_position="top"]
-		) {
-		--better-findbar-transform-translateY: -150px;
-		--better-findbar-position-bottom: auto;
-		--better-findbar-position-top: 15px;
+/* Horizontal Position */
+body:has(
+		#theme-Better-Find-Bar[theme-better_find_bar-horizontal_position="left"]
+	) {
+	--better-findbar-transform-translateX: 0%;
+	--better-findbar-position-left: 15px;
+	--better-findbar-position-right: auto;
+}
+
+body:has(
+		#theme-Better-Find-Bar[theme-better_find_bar-horizontal_position="right"]
+	) {
+	--better-findbar-transform-translateX: 0%;
+	--better-findbar-position-left: auto;
+	--better-findbar-position-right: 15px;
+}
+
+/* Vertical Position */
+body:has(
+		#theme-Better-Find-Bar[theme-better_find_bar-vertical_position="top"]
+	) {
+	--better-findbar-transform-translateY: -150px;
+	--better-findbar-position-bottom: auto;
+	--better-findbar-position-top: 15px;
+}
+
+
+/* Background blur */
+@media (-moz-bool-pref: "theme.better_find_bar.transparent_background") {
+	findbar,
+	findbar .findbar-textbox:not([status="notfound"]) {
+		backdrop-filter: blur(8px);
+
+		background: color-mix(in hsl, var(--zen-primary-color), transparent 10%) !important;
 	}
+}
 
-
-	/* Background blur */
-	@media (-moz-bool-pref: "theme.better_find_bar.transparent_background") {
-		findbar,
-		findbar .findbar-textbox:not([status="notfound"]) {
-			backdrop-filter: blur(8px);
-
-			background: color-mix(in hsl, var(--zen-primary-color), transparent 10%) !important;
-		}
+/* Hide highlight checkbox */
+body:has(
+		#theme-Better-Find-Bar[theme-better_find_bar-hide_highlight="hide_immediately"]
+	) {
+	findbar .findbar-highlight {
+		display: none !important;
 	}
+}
 
-	/* Hide highlight checkbox */
-	body:has(
-			#theme-Better-Find-Bar[theme-better_find_bar-hide_highlight="hide_immediately"]
-		) {
-		findbar .findbar-highlight {
-			display: none !important;
-		}
+body:has(
+		#theme-Better-Find-Bar[theme-better_find_bar-hide_highlight="hide_on_disable"]
+	) {
+	findbar checkbox.findbar-highlight:not([checked]) {
+		display: none !important;
 	}
+}
 
-	body:has(
-			#theme-Better-Find-Bar[theme-better_find_bar-hide_highlight="hide_on_disable"]
-		) {
-		findbar checkbox.findbar-highlight:not([checked]) {
-			display: none !important;
-		}
+/* Hide match case checkbox */
+body:has(
+		#theme-Better-Find-Bar[theme-better_find_bar-hide_match_case="hide_immediately"]
+	) {
+	findbar .findbar-case-sensitive {
+		display: none !important;
 	}
+}
 
-	/* Hide match case checkbox */
-	body:has(
-			#theme-Better-Find-Bar[theme-better_find_bar-hide_match_case="hide_immediately"]
-		) {
-		findbar .findbar-case-sensitive {
-			display: none !important;
-		}
+body:has(
+		#theme-Better-Find-Bar[theme-better_find_bar-hide_match_case="hide_on_disable"]
+	) {
+	findbar checkbox.findbar-case-sensitive:not([checked]) {
+		display: none !important;
 	}
+}
 
-	body:has(
-			#theme-Better-Find-Bar[theme-better_find_bar-hide_match_case="hide_on_disable"]
-		) {
-		findbar checkbox.findbar-case-sensitive:not([checked]) {
-			display: none !important;
-		}
+/* Hide match diacritics checkbox */
+body:has(
+		#theme-Better-Find-Bar[theme-better_find_bar-hide_match_diacritics="hide_immediately"]
+	) {
+	findbar .findbar-match-diacritics {
+		display: none !important;
 	}
+}
 
-	/* Hide match diacritics checkbox */
-	body:has(
-			#theme-Better-Find-Bar[theme-better_find_bar-hide_match_diacritics="hide_immediately"]
-		) {
-		findbar .findbar-match-diacritics {
-			display: none !important;
-		}
+body:has(
+		#theme-Better-Find-Bar[theme-better_find_bar-hide_match_diacritics="hide_on_disable"]
+	) {
+	findbar checkbox.findbar-match-diacritics:not([checked]) {
+		display: none !important;
 	}
+}
 
-	body:has(
-			#theme-Better-Find-Bar[theme-better_find_bar-hide_match_diacritics="hide_on_disable"]
-		) {
-		findbar checkbox.findbar-match-diacritics:not([checked]) {
-			display: none !important;
-		}
+/* Hide whole words checkbox */
+body:has(
+		#theme-Better-Find-Bar[theme-better_find_bar-hide_whole_words="hide_immediately"]
+	) {
+	findbar .findbar-entire-word {
+		display: none !important;
 	}
+}
 
-	/* Hide whole words checkbox */
-	body:has(
-			#theme-Better-Find-Bar[theme-better_find_bar-hide_whole_words="hide_immediately"]
-		) {
-		findbar .findbar-entire-word {
-			display: none !important;
-		}
+body:has(
+		#theme-Better-Find-Bar[theme-better_find_bar-hide_whole_words="hide_on_disable"]
+	) {
+	findbar .findbar-entire-word:not([checked]) {
+		display: none !important;
 	}
+}
 
-	body:has(
-			#theme-Better-Find-Bar[theme-better_find_bar-hide_whole_words="hide_on_disable"]
-		) {
-		findbar .findbar-entire-word:not([checked]) {
-			display: none !important;
-		}
+/* Hide find status label */
+@media (-moz-bool-pref: "theme.better_find_bar.hide_find_status") {
+	findbar .findbar-find-status {
+		display: none !important;
 	}
+}
 
-	/* Hide find status label */
-	@media (-moz-bool-pref: "theme.better_find_bar.hide_find_status") {
-		findbar .findbar-find-status {
-			display: none !important;
-		}
-	}
-
-	/* Hide found matches label */
-	@media (-moz-bool-pref: "theme.better_find_bar.hide_found_matches") {
-		findbar .findbar-label.found-matches {
-			display: none !important;
-		}
+/* Hide found matches label */
+@media (-moz-bool-pref: "theme.better_find_bar.hide_found_matches") {
+	findbar .findbar-label.found-matches {
+		display: none !important;
 	}
 }
