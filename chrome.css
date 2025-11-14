@@ -62,6 +62,13 @@ findbar {
 	}
 }
 
+/* Disable animations */
+@media (-moz-bool-pref: "theme.better_find_bar.instant_animations") {
+	findbar, findbar .findbar-container {
+		transition: initial !important;
+	}
+}
+
 /* Horizontal Position */
 body:has(
 		#theme-Better-Find-Bar[theme-better_find_bar-horizontal_position="left"]

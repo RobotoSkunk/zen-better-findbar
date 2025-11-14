@@ -124,6 +124,12 @@
 		]
 	},
 	{
+		"property": "theme.better_find_bar.instant_animations",
+		"label": "Instant animations",
+		"type": "checkbox",
+		"defaultValue": false
+	},
+	{
 		"property": "theme.better_find_bar.hide_find_status",
 		"label": "Hide find status label",
 		"type": "checkbox",
