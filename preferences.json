@@ -9,7 +9,7 @@
 		"property": "theme.better_find_bar.custom_background",
 		"label": "Custom background HEX color",
 		"type": "string",
-		"defaultValue": "#123456"
+		"defaultValue": "#112233"
 	},
 	{
 		"property": "theme.better_find_bar.transparent_background",
