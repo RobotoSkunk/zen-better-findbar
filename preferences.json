@@ -7,7 +7,7 @@
 	},
 	{
 		"property": "theme.better_find_bar.custom_background",
-		"label": "Custom background CSS (or HEX color)",
+		"label": "Custom background HEX color",
 		"type": "string",
 		"defaultValue": "#123456"
 	},
