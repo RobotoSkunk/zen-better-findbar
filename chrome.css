@@ -6,9 +6,9 @@
 	--better-findbar-position-bottom: 15px;
 	--better-findbar-position-left: 50%;
 	--better-findbar-position-right: auto;
-	--better-findbar-background-color: var(--zen-primary-color);
-	--better-findbar-text-color: var(--zen-secondary-color);
-	--better-findbar-box-shadow: var(--box-shadow-10);
+	--better-findbar-background-color: var(--zen-colors-primary);
+	--better-findbar-text-color: var(--zen-colors-secondary);
+	--better-findbar-box-shadow: 0 5px 10px rgba(0,0,0,0.5);
 }
 
 /* Custom background */
