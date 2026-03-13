@@ -7,8 +7,8 @@
 	--better-findbar-position-left: 50%;
 	--better-findbar-position-right: auto;
 	--better-findbar-background-color: var(--zen-colors-primary);
-	--better-findbar-text-color: var(--zen-colors-secondary);
-	--better-findbar-box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+	--better-findbar-text-color: var(--toolbar-color);
+	--better-findbar-box-shadow: 0 5px 10px #00000080;
 }
 
 /* Custom background */
@@ -93,12 +93,11 @@ findbar {
 				background-color: color-mix(
 					in srgb,
 					var(--better-findbar-background-color),
-					red 50%
+					#e80538 50%
 				) !important;
 				color: inherit;
 			}
 		}
-	}
 
 		& .findbar-textbox:focus {
 			outline: 1px solid
@@ -110,6 +109,7 @@ findbar {
 			outline-offset: -1px !important;
 		}
 	}
+
 	&[hidden] {
 		transform: translateX(var(--better-findbar-transform-translateX)) translateY(var(--better-findbar-transform-translateY));
 	}
